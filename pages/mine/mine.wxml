@@ -1,0 +1,16 @@
+<!--pages/mine.wxml-->
+<view class='mine'>
+  <view class='top'>
+    <text class='text-per-center'>个人中心</text>
+    <view class='top-center'>
+      <image class='user-avater' src='../../images/my_user_pic.png'></image>
+      <view class='user-set'>
+        <image class='user-icon' src='../../images/setUp.png'></image>
+        <text class='user-set-text'>帐户设置</text>
+      </view>
+    </view>
+    <text class='user-name'>春风自是人间客</text>
+  </view>
+  <view class='order'>我的订单</view>
+  <view class='options'>优惠券</view>
+</view>

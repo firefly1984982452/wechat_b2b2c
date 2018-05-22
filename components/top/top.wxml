@@ -1,0 +1,16 @@
+<!--components/top/top.wxml-->
+<view class='top'>
+  <image class='logo' src='../../images/logo.png'></image>
+  <view class='search'>
+    <image class="search-icon" src="../../images/search.png"></image>
+    <text class="title">搜索宝贝、店铺……</text>
+  </view>
+  <view class='option' bindtap='scanFun'>
+    <image class='icon' src='../../images/RichScan.png'></image>
+    <text class='option-text'>扫一扫</text>
+  </view>
+  <view class='option'>
+    <image class='icon' src='../../images/news.png'></image>
+    <text class='option-text'>消息</text>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+/* pages/mine.wxss */
+
+.mine {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  width: 100%;
+  height: 300rpx;
+  background-color: #FAAF3A;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.text-per-center {
+  display: flex;
+  align-self: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 40rpx;
+}
+.top-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+.user-avater{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  margin: 0 auto;
+}
+.user-set{
+  position: absolute;
+  right: 0;
+color: #797979;
+
+}
+.user-icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+.user-set-text{
+
+}
+.user-name{
+  display: flex;
+  align-self: center;
+  font-size: 40rpx;
+}
+.order {
+}
+
+.options {
+}

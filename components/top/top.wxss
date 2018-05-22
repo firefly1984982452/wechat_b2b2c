@@ -1,0 +1,58 @@
+/* components/top/top.wxss */
+
+.top, .logo, .search, .option {
+  height: 100rpx;
+}
+
+.top {
+  background-color: #e09629;
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 200rpx;
+  height: 80rpx;
+}
+
+.search {
+  width: 300rpx;
+  height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #F4BD40;
+  border-radius: 20rpx;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.search-icon {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.title {
+  font-size: 20rpx;
+
+}
+
+.option {
+  width: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon, .icon {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.option-text, .title {
+  color: #fff;
+  font-size: 25rpx;
+}

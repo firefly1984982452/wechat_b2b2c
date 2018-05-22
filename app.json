@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/cart/cart",
+    "pages/class/class"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E09629",
+    "navigationBarTitleText": "贡品网",
+    "navigationBarTextStyle": "write"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#F4BD40",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/home_icon_active.png",
+        "iconPath": "images/home_icon.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/class_icon_active.png",
+        "iconPath": "images/class_icon.png",
+        "pagePath": "pages/class/class",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "images/cart_icon_active.png",
+        "iconPath": "images/cart_icon.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "images/per_icon_active.png",
+        "iconPath": "images/per_icon.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  } 
+
+}

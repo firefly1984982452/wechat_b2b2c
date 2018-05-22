@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="container">
+  <top class="top"></top>
+
+  <!-- 公告 -->
+  <view class="adv">
+    <text>贡品网</text>
+    <view class="adv-image-box">
+      <text class="adv-image-text">快迅</text>
+      <image class='adv-image' src="../../images/index_flash.png"></image>
+    </view>
+    <swiper class="adv-name" autoplay='true' interval='3000' duration='1000'>
+      <block wx:for="{{adv}}" wx:key="index">
+        <swiper-item>
+          <text>{{item}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+    <text>更多</text>
+  </view>
+
+  <!-- 导航 -->
+  <view class='nav'>
+    <view class="nav-item" wx:for="{{nav}}" wx:key="index" wx:for-index="index">
+      <image class="nav-image" src="{{localImageURL+item.image}}"></image>
+      <text class="nav-text">{{item.text}}</text>
+    </view>
+  </view>
+
+  <!-- 拍卖 -->
+  <view class='auction'>
+    <view class='auction-top'>
+      <image class='icon-auction' src='../../images/auction.png'></image>
+      <text>今日拍卖</text>
+    </view>
+    <view class='auction-centent'>
+      <!-- <image class='auction-image' src='../../images/index_Limited.png'></image> -->
+      <view class='auction-image2'>
+        <text class='doing'>正在进行</text>
+        <text class='ending'>距离结束:{{time}}</text>
+      </view>
+      <view class='auction-info'>
+        <text class='auction-title'>尚膳琥珀蜜蜡-瑧品拍卖</text>
+        <view class='action-number'>
+          <view class='action-number-item'>
+            <text class='action-number-person'>13</text>
+            <text class='action-number-info'>人报名</text>
+          </view>
+          <view class='sep'></view>
+          <view class='action-number-item'>
+            <text class='action-number-person'>2562</text>
+            <text class='action-number-info'>人围观</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 店铺街 -->
+  <view class='floor'>
+    <view class='nav-li'>
+      <text class='name'>店铺街</text>
+      <text>更多></text>
+    </view>
+  </view>
+  <view class='brand-list'>
+    <view class='brand-item' wx:for="{{brandList}}" wx:key="index">
+      <image class='brand-image' src="{{localImageURL+item.image}}"></image>
+      <view class='brand-text'>{{item.title}}</view>
+    </view>
+  </view>
+  <!-- 楼层 -->
+  <view class='floor' wx:for="{{floor}}" wx:key="index" wx:for-index="index">
+    <view class='nav-li'>
+      <text class='name'>{{item.class_name}}</text>
+      <text>更多></text>
+    </view>
+    <image class='banner' src='../../images/con13.jpg'></image>
+    <view class='goods-box'>
+      <view class='goods' wx:for="{{item.goods}}" wx:key="index">
+        <image class='goods-image' src='{{URL+item.image}}'></image>
+        <text class='goods-title'>{{item.title}}</text>
+        <text class='goods-price'>￥{{item.goods_price}}</text>
+      </view>
+    </view>
+  </view>
+</view>
