@@ -57,6 +57,9 @@
   </view>
 
   <!-- 店铺街 -->
+  <view class='brand-box'>
+    <image class='brand-box-image' src='../../images/index_Wood.png'></image>
+  </view>
   <view class='floor'>
     <view class='nav-li'>
       <text class='name'>店铺街</text>

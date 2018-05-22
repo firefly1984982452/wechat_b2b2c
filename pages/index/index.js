@@ -18,7 +18,6 @@ Page({
   },
   data: {
     URL: 'http://center.shopsn.cn/',
-    time: '5小时20分钟48秒',
     nav: [{ image: "nav01.png", text: "抢购" },
     { image: "nav02.png", text: "品牌" },
     { image: "nav03.jpg", text: "店铺" },
@@ -121,18 +120,20 @@ Page({
       "goods": []
     }],
     localImageURL:"../../images/",
-    brandList: [{ title: "GR理发", image: "logo01.PNG" },
-      { title: "MAC", image: "logo02.PNG" },
-      { title: "李宁", image: "logo03.PNG" },
-      { title: "黑天鹅", image: "logo04.PNG" },
-      { title: "大象", image: "logo05.PNG" },
-      { title: "360", image: "logo06.PNG" },
-      { title: "三只松鼠", image: "logo07.PNG" },
-      { title: "Deep传媒", image: "logo08.PNG" },
-      { title: "林肯橄榄球", image: "logo09.PNG" },
-      { title: "黑豹钓鱼队", image: "logo10.PNG" },
-      { title: "Smartie男装", image: "logo11.PNG" },
-      { title: "FilmWeave", image: "logo12.PNG" }]
+    brandList: [{ title: "GR理发", image: "logo01.png" },
+      { title: "MAC", image: "logo02.png" },
+      { title: "李宁", image: "logo03.png" },
+      { title: "黑天鹅", image: "logo04.png" },
+      { title: "大象", image: "logo05.png" },
+      { title: "360", image: "logo06.png" },
+      { title: "三只松鼠", image: "logo07.png" },
+      { title: "Deep传媒", image: "logo08.png" },
+      { title: "林肯橄榄球", image: "logo09.png" },
+      { title: "黑豹钓鱼队", image: "logo10.png" },
+      { title: "Smartie男装", image: "logo11.png" },
+      { title: "FilmWeave", image: "logo12.png" }],
+    start_tamp:1529654400,
+    time:''
   },
   //事件处理函数
   bindViewTap: function () {
@@ -141,6 +142,21 @@ Page({
     })
   },
   onLoad: function () {
-
+    var now = Math.round(new Date().getTime()/1000);
+    var nTime = this.data.start_tamp-now;
+    var day = Math.floor(nTime / 1000 / 60 / 60 / 24);
+    var hour = Math.floor(nTime % 1000 / 60 / 60);
+    var minute = Math.floor(nTime / 1000 / 60);
+    var sec = Math.floor(nTime / 1000);
+    console.log(day + "===" + hour + "===" + minute + "===" + sec);
+    if (day) {
+      return day + "天";
+    } else if (hour) {
+      return hour + '小时';
+    } else if (minute) {
+      return minute + '分';
+    } else {
+      return sec + '秒';
+    }
   },
 })

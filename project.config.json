@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
 	"appid": "wx8bda0c57123111e7",
-	"projectname": "b2b2c_mobile",
+	"projectname": "wechat_b2b2c",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
