@@ -8,6 +8,7 @@
   justify-content: space-around;
   align-items: center;
   border-bottom: 1rpx solid #eee;
+  font-size: 30rpx;
 }
 
 .adv-image-box {
@@ -148,7 +149,7 @@
 
 .auction-centent {
   width: 700rpx;
-  height: 400rpx;
+  height: 380rpx;
   background-color: #fff;
 }
 
@@ -192,16 +193,17 @@
 }
 
 .auction-info {
-  width: 100%;
+  width: 90%;
   padding: 20rpx;
 }
 
 .auction-title {
   color: #323232;
-  font-size: 40rpx;
+  font-size: 30rpx;
 }
 
 .action-number {
+  font-size: 25rpx;
   display: flex;
   flex-direction: row;
 }

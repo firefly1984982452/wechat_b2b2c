@@ -1,5 +1,5 @@
 <!--pages/class/class.wxml-->
-<view>
+<view class="container">
 
   <top class="top"></top>
   <view>ee</view>

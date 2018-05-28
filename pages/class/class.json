@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents":{
+    "top":"../../components/top/top"
+  }
+}

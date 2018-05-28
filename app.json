@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/mine/mine",
     "pages/cart/cart",
-    "pages/class/class"
+    "pages/class/class",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -41,6 +42,5 @@
         "text": "我的"
       }
     ]
-  } 
-
+  }
 }
