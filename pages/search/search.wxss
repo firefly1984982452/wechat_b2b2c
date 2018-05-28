@@ -1,1 +1,19 @@
-/* pages/search/search.wxss */
+.search{
+  display: flex;
+  flex-direction: column;
+  font-weight: 30rpx;
+}
+.top{
+  height: 50rpx;
+  background-color: #e09629;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+}
+.input{
+  border: 1px solid #eee;
+
+  color: #fff;
+}
+.cancel{
+}

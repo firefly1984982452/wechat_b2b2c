@@ -1,2 +1,10 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class='search'>
+  <view class='top'>
+    <view class='input'>搜索宝贝、店铺……</view>
+    <text class='cancel'>取消</text>
+  </view>
+  <view>热门搜索</view>
+  <view>历史搜索</view>
+  <view>清空历史记录</view>
+
+</view>
