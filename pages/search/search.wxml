@@ -3,8 +3,20 @@
     <view class='input'>搜索宝贝、店铺……</view>
     <text class='cancel'>取消</text>
   </view>
-  <view>热门搜索</view>
-  <view>历史搜索</view>
-  <view>清空历史记录</view>
+  <view class='content'>
+    <view class='hot'>
+      <view class='search-type'>热门搜索</view>
+      <view class='search-content' wx:for="{{hot}}" wx:key="index">
+        <text class='search-name'>{{item.hot_words}}</text>
+      </view>
+    </view>
+    <view class='history'>
+      <view class='search-type'>历史搜索</view>
+      <view class='search-content' wx:for="{{hot}}" wx:key="index">
+        <text class='search-name'>{{item.hot_words}}</text>
+      </view>
+    </view>
+    <view class='btn-empty'>清空历史记录</view>
 
+  </view>
 </view>

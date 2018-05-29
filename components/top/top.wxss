@@ -5,7 +5,7 @@
 }
 
 .top {
-  background-color: #e09629;
+  background-color: #D19E29;
   display: flex;
   flex-direction: row;
   width: 750rpx;
@@ -22,7 +22,7 @@
   height: 70rpx;
   display: flex;
   flex-direction: row;
-  background-color: #F4BD40;
+  background-color: #E9C440;
   border-radius: 20rpx;
   align-items: center;
   justify-content: center;
