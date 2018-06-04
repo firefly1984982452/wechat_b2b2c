@@ -18,7 +18,7 @@
 }
 .input{
   height: 50rpx;
-  border-radius: 20rpx;
+  border-radius: 15rpx;
   color: #fff;
   width: 70%;
   background-color: #D6B603;
@@ -49,6 +49,7 @@
 }
 .search-type{
   display: flex;
+  align-items: center;
   height: 100rpx;
   color: #999;
 }
@@ -83,4 +84,10 @@
   color: #b3b3b3;
   border: 1px solid #b3b3b3;
   border-radius: 10rpx;
+  width: 90%;
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
 }

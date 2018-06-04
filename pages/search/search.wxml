@@ -1,7 +1,7 @@
 <view class='search'>
   <view class='top'>
     <view class='input'>搜索宝贝、店铺……</view>
-    <text class='cancel'>取消</text>
+    <text class='cancel' bindtap='cancelFun'>取消</text>
   </view>
   <view class='content'>
     <view class='hot'>

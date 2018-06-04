@@ -83,5 +83,14 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  /**
+   * 取消搜索
+   */
+  cancelFun:function(){
+    wx.navigateBack({
+      
+    })
   }
 })
