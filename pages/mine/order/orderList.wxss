@@ -1,0 +1,8 @@
+/* pages/mine/order/orderList.wxss */
+.top{
+  height: 100rpx;
+  background: #D19E29;
+  color:#fff;
+  display: flex;
+  flex-direction: row;
+}

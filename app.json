@@ -4,7 +4,8 @@
     "pages/mine/mine",
     "pages/cart/cart",
     "pages/class/class",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/mine/order/orderList"
   ],
   "window": {
     "backgroundTextStyle": "light",

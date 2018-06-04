@@ -32,6 +32,7 @@
     <view class='auction-top'>
       <image class='icon-auction' src='../../images/auction.png'></image>
       <text>今日拍卖</text>
+      <navigator url='../mine/order/orderList'>订单</navigator>
     </view>
     <view class='auction-centent'>
       <!-- <image class='auction-image' src='../../images/index_Limited.png'></image> -->

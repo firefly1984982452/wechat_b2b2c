@@ -1,0 +1,9 @@
+<!--pages/mine/order/orderList.wxml-->
+<view>
+<view class='top'>
+  <image src='../'></image>
+  <text>全部订单</text>
+  <text>···</text>
+</view>
+
+</view>
