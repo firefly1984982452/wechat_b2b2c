@@ -1,9 +1,11 @@
 <!--pages/mine/order/orderList.wxml-->
-<view>
-<view class='top'>
-  <image src='../'></image>
-  <text>全部订单</text>
-  <text>···</text>
-</view>
-
+<view class='content'>
+<!-- 顶部 -->
+  <view class='top'>
+    <text>全部订单</text>
+  </view>
+  <!-- 导航 -->
+  <scroll-view class='nav' scroll-x="true">
+    <view class='nav-text'  wx:for="{{navList}}">{{item}}</view>
+  </scroll-view>
 </view>

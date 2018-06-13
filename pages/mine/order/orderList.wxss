@@ -1,8 +1,29 @@
 /* pages/mine/order/orderList.wxss */
+.content{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  
+}
 .top{
-  height: 100rpx;
+  height: 60rpx;
   background: #D19E29;
   color:#fff;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav{
+  margin-top: 60rpx;
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
   flex-direction: row;
+  white-space: nowrap;
+
+}
+.nav-text{
+  width: 200rpx;
+  height: 100rpx;
+
 }
