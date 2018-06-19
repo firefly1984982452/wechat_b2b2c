@@ -1,1 +1,32 @@
 /* pages/class/class.wxss */
+.content{
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 100rpx;
+}
+.left{
+  width: 150rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.left-item{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 25rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.left-item.active{
+  color: #e09629;
+  border-left: 5rpx solid #e9c440;
+}
+
+.right{
+  width: 600rpx;
+  height: 100rpx;
+  background: #F2F2F2;
+}

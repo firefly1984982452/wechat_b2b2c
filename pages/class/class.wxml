@@ -2,5 +2,18 @@
 <view class="container">
 
   <top class="top"></top>
-  <view>ee</view>
+
+  <view class='content'>
+
+    <view class='left'>
+      <scroll-view class="left-item" wx:for="{{list}}" wx:key="index" scroll-y="true">
+          {{item.class_name}}
+      </scroll-view>
+    </view>
+
+    <view class='right'>
+      <text>{{listDetail}}</text>
+    </view>
   </view>
+
+</view>

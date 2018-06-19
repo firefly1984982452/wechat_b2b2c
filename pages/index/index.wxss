@@ -1,6 +1,7 @@
 /* 公告 */
 
 .adv {
+  margin-top: 100rpx;
   width: 750rpx;
   height: 100rpx;
   display: flex;

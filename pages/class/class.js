@@ -5,14 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    list:[],
+    listDetail:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.request({
+      url: 'http://mapi.shopsn.cn/GoodsClass/getFirstId',
+      data:'',
+      method:'post',
+      header:{
+        'content-type':'application/json'
+      },
+      success:function(res){
+        that.setData({
+          list:res.data.data
+        })
+      }
+    });
+    that.getClassFloor(1);
+  },
   
+  getClassFloor(index){
+    var that = this;
+    wx.request({
+      url: 'http://mapi.shopsn.cn/GoodsClass/getOtherClass',
+      method:'get',
+      data:{fid:index},
+      header:{
+        'content-type':'application/json'
+      },
+      success:function(res){
+        that.setData({
+          listDetail : res.data.data
+        })
+      }
+    })
   },
 
   /**
