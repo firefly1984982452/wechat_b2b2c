@@ -27,6 +27,39 @@
 
 .right{
   width: 600rpx;
-  height: 100rpx;
+  height: 500rpx;
   background: #F2F2F2;
+}
+.nav{
+}
+.nav-class-text{
+  color: #333;
+  width: 100%;
+  padding: 0 10rpx;
+}
+.nav-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10rpx;
+}
+.nav-item{
+  margin: 0 10rpx;
+  width: 180rpx;
+  height: 220rpx;
+  padding: 5rpx;
+  background: #fff;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.nav-text{
+  width: 150rpx;
 }

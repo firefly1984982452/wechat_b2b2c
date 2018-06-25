@@ -6,7 +6,8 @@ Page({
    */
   data: {
     list:[],
-    listDetail:[]
+    listDetail:[],
+    URL:'http://center.shopsn.cn/'
   },
 
   /**

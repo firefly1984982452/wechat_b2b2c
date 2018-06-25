@@ -7,12 +7,20 @@
 
     <view class='left'>
       <scroll-view class="left-item" wx:for="{{list}}" wx:key="index" scroll-y="true">
-          {{item.class_name}}
+        {{item.class_name}}
       </scroll-view>
     </view>
 
     <view class='right'>
-      <text>{{listDetail}}</text>
+      <view class='nav' wx:for="{{listDetail}}" wx:key="index" class=''>
+        <text class='nav-class-text'>{{item.class_name}}</text>
+        <view class='nav-box'>
+          <view class='nav-item' wx:for="{{item.three}}">
+            <image class='nav-image' src='{{URL+item.pic_url}}'></image>
+            <text class='nav-text'>{{item.class_name}}</text>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 
