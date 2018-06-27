@@ -12,7 +12,7 @@
 
   <!-- 公告 -->
   <view class="adv">
-    <text>贡品网</text>
+    <text>{{name}}</text>
     <view class="adv-image-box">
       <text class="adv-image-text">快迅</text>
       <image class='adv-image' src="../../images/index_flash.png"></image>
@@ -36,14 +36,14 @@
   </view>
 
   <!-- 拍卖 -->
-  <view class='auction'>
+  
+  <!-- <view class='auction'>
     <view class='auction-top'>
       <image class='icon-auction' src='../../images/auction.png'></image>
       <text>今日拍卖</text>
       <navigator url='../mine/order/orderList'>订单</navigator>
     </view>
     <view class='auction-centent'>
-      <!-- <image class='auction-image' src='../../images/index_Limited.png'></image> -->
       <view class='auction-image2'>
         <text class='doing'>正在进行</text>
         <text class='ending'>距离结束:{{time}}</text>
@@ -63,10 +63,10 @@
         </view>
       </view>
     </view>
-  </view>
+  </view>  -->
 
   <!-- 店铺街 -->
-  <view class='brand-box'>
+  <!-- <view class='brand-box'>
     <image class='brand-box-image' src='../../images/index_Wood.png'></image>
   </view>
   <view class='floor'>
@@ -80,19 +80,20 @@
       <image class='brand-image' src="{{localImageURL+item.image}}"></image>
       <view class='brand-text'>{{item.title}}</view>
     </view>
-  </view>
+  </view> -->
+
   <!-- 楼层 -->
   <view class='floor' wx:for="{{floor}}" wx:key="index" wx:for-index="index">
     <view class='nav-li'>
-      <text class='name'>{{item.class_name}}</text>
+      <text class='name'>{{item.class.class_name}}</text>
       <text>更多></text>
     </view>
-    <image class='banner' src='../../images/con13.jpg'></image>
+    <image class='banner' src='{{IMG_URL+item.class.pic_url}}'></image>
     <view class='goods-box'>
       <view class='goods' wx:for="{{item.goods}}" wx:key="index">
-        <image class='goods-image' src='{{URL+item.image}}'></image>
+        <image class='goods-image' src='{{IMG_URL+item.pic_url}}'></image>
         <text class='goods-title'>{{item.title}}</text>
-        <text class='goods-price'>￥{{item.goods_price}}</text>
+        <text class='goods-price'>￥{{item.price}}</text>
       </view>
     </view>
   </view>

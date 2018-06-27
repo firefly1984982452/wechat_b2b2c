@@ -8,7 +8,7 @@
     "pages/mine/order/orderList"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#D19E29",
     "navigationBarTitleText": "贡品网",
     "navigationBarTextStyle": "write"

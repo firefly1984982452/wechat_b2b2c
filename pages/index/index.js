@@ -18,19 +18,11 @@ Page({
     }
   },
   data: {
-    IMG_URL: 'http://center.shopsn.cn/',
-    nav: [{ image: "nav01.png", text: "抢购" },
-    { image: "nav02.png", text: "品牌" },
-    { image: "nav03.jpg", text: "店铺" },
-    { image: "nav04.png", text: "积分商城" },
-    { image: "nav05.png", text: "皇家御饮" },
-    { image: "nav06.png", text: "御贡膳品" },
-    { image: "nav07.png", text: "滋补养身" },
-    { image: "nav08.png", text: "珠宝玉器" },
-    { image: "nav09.png", text: "喜庆物品" },
-    { image: "nav10.png", text: "帮助中心" }],
-    adv: ["办公用纸调价通知函", "商城开始测试", "关于客户三证合一、开票资料变更的通知", "配送时效延迟公告", "复印纸秒杀时间调整通知", "6月活动"],
+    name: app.globalData.name,
+    IMG_URL: app.globalData.IMG_URL,
+    nav: [],
     floor: [],
+    page:1,
     localImageURL:"../../images/",
     brandList: [{ title: "GR理发", image: "logo01.png" },
       { title: "MAC", image: "logo02.png" },
@@ -56,19 +48,42 @@ Page({
   },
   onLoad: function () {
     this.getHome();
-    // this.getFloor();
+    this.getFloor();
   },
 
   getFloor:function(){
-    HTTP(API.getFloor, { page: 1,token: 'mqg094tjvipu9cg2ldmp58ok34'},'get')
+    HTTP(API.getFloor, { 
+      page: this.data.page,
+      token: 'mqg094tjvipu9cg2ldmp58ok34'
+      },'get').then((res)=>{
+
+        var nfloor = this.data.floor;
+        nfloor.push(res);
+        this.setData({ floor: nfloor });
+        this.data.page++;
+
+        wx.hideLoading();
+    })
+    console.log(this.data.floor.length, this.data.floor)
   },
 
   getHome(){
-    HTTP(API.getHome, {}, 'post').then((res)=>{
+    HTTP(API.getHome, {}, 'post').then((res) => {
+      console.log(res)
       this.setData({
         homeData: res
       });
     })
+    console.log(this.data.homeData)
+  },
+
+  onReachBottom:function(){
+    var that = this;
+    wx.showLoading({
+      title: '加载中...',
+    });
+    
+    that.getFloor();
   }
 
 })
