@@ -18,7 +18,7 @@ Page({
     }
   },
   data: {
-    URL: 'http://center.shopsn.cn/',
+    IMG_URL: 'http://center.shopsn.cn/',
     nav: [{ image: "nav01.png", text: "抢购" },
     { image: "nav02.png", text: "品牌" },
     { image: "nav03.jpg", text: "店铺" },
@@ -45,7 +45,8 @@ Page({
       { title: "Smartie男装", image: "logo11.png" },
       { title: "FilmWeave", image: "logo12.png" }],
     start_tamp:1529654400,
-    time:''
+    time:'',
+    homeData:{}
   },
   //事件处理函数
   bindViewTap: function () {
@@ -54,10 +55,20 @@ Page({
     })
   },
   onLoad: function () {
-    this.getFloor();
+    this.getHome();
+    // this.getFloor();
   },
 
   getFloor:function(){
     HTTP(API.getFloor, { page: 1,token: 'mqg094tjvipu9cg2ldmp58ok34'},'get')
+  },
+
+  getHome(){
+    HTTP(API.getHome, {}, 'post').then((res)=>{
+      this.setData({
+        homeData: res
+      });
+    })
   }
+
 })

@@ -2,6 +2,14 @@
 <view class="container">
   <top class="top"></top>
 
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+    <block wx:for="{{homeData.banner}}" wx:key="index">  
+      <swiper-item>  
+        <image src="{{IMG_URL + item.pic_url}}" class="slide-image" mode="aspectFill"/>  
+      </swiper-item>  
+    </block>  
+  </swiper>
+
   <!-- 公告 -->
   <view class="adv">
     <text>贡品网</text>
@@ -10,9 +18,9 @@
       <image class='adv-image' src="../../images/index_flash.png"></image>
     </view>
     <swiper class="adv-name" autoplay='true' interval='3000' duration='1000'>
-      <block wx:for="{{adv}}" wx:key="index">
+      <block wx:for="{{homeData.announcement}}" wx:key="index">
         <swiper-item>
-          <text>{{item}}</text>
+          <text>{{item.title}}</text>
         </swiper-item>
       </block>
     </swiper>
@@ -21,9 +29,9 @@
 
   <!-- 导航 -->
   <view class='nav'>
-    <view class="nav-item" wx:for="{{nav}}" wx:key="index" wx:for-index="index">
-      <image class="nav-image" src="{{localImageURL+item.image}}"></image>
-      <text class="nav-text">{{item.text}}</text>
+    <view class="nav-item" wx:for="{{homeData.nav}}" wx:key="index" wx:for-index="index">
+      <image class="nav-image" src="{{IMG_URL+item.pic}}"></image>
+      <text class="nav-text">{{item.nav_titile}}</text>
     </view>
   </view>
 
