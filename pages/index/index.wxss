@@ -287,6 +287,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   height: 50rpx;
+  font-size: 30rpx;
 }
 
 .goods-price {

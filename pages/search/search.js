@@ -1,38 +1,23 @@
 // pages/search/search.js
+
+var API = require('../../utils/API.js');
+var HTTP = require('../../utils/HTTP.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    hot: [
-      {
-        "id": "30",
-        "hot_words": "单反"
-      },
-      {
-        "id": "29",
-        "hot_words": "电饭煲"
-      },
-      {
-        "id": "28",
-        "hot_words": "空调"
-      },
-      {
-        "id": "27",
-        "hot_words": "手机"
-      },
-      {
-        "id": "26",
-        "hot_words": "笔记本"
-      }
-    ]
+    hotData: [],
+    historySearch:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getHot();
   
   },
 
@@ -91,6 +76,14 @@ Page({
   cancelFun:function(){
     wx.navigateBack({
       
+    })
+  },
+
+  getHot(){
+    HTTP(API.hotSearch,{},'post').then((res)=>{
+      this.setData({
+        hotData:res
+      })
     })
   }
 })
