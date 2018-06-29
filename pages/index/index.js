@@ -22,6 +22,7 @@ Page({
     IMG_URL: app.globalData.IMG_URL,
     nav: [],
     floor: [],
+    adArr:[],
     page:1,
     localImageURL:"../../images/",
     brandList: [{ title: "GR理发", image: "logo01.png" },
@@ -60,11 +61,24 @@ Page({
         var nfloor = this.data.floor;
         nfloor.push(res);
         this.setData({ floor: nfloor });
-        this.data.page++;
-
-        wx.hideLoading();
+        this.getAd();
     })
     console.log(this.data.floor.length, this.data.floor)
+  },
+
+  getAd(){
+    HTTP(API.getAd,{
+      page:this.data.page
+    }, 'get').then((res) => {
+      var item = this.data.adArr;
+      item.push(res);
+      this.setData({
+        adArr:item
+      })
+      this.data.page++;
+      wx.hideLoading();
+      console.log(res)
+    })
   },
 
   getHome(){

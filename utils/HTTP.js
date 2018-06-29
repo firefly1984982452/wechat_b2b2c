@@ -6,7 +6,7 @@ var HTTP = function(API,params,requestType){
   return new Promise((resolve,reject)=>{
     wx.request({
       url: HTTP_URL + API,
-      data: (params),
+      data: params,
       method: '' + requestType,
       header: {
         'content-type': 'application/json' // 默认值
@@ -21,5 +21,6 @@ var HTTP = function(API,params,requestType){
     })
   })
 }
+
 
 module.exports = HTTP;

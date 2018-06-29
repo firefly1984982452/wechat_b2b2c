@@ -88,7 +88,7 @@
       <text class='name'>{{item.class.class_name}}</text>
       <text>更多></text>
     </view>
-    <image class='banner' src='{{IMG_URL+item.class.pic_url}}'></image>
+    <image class='banner' src='{{IMG_URL+adArr[index].pic_url}}'></image>
     <view class='goods-box'>
       <view class='goods' wx:for="{{item.goods}}" wx:key="index">
         <image class='goods-image' src='{{IMG_URL+item.pic_url}}'></image>
