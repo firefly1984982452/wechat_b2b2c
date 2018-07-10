@@ -10,15 +10,44 @@ Page({
    */
   data: {
     hotData: [],
-    historySearch:[]
+    historySearch:[],
+    inputValue:''
+  },
+
+  bindKeyInput:function(e){
+    this.setData({
+      inputValue:e.detail.value
+    })
+  },
+  searchFun(e){
+    var arr = this.data.historySearch;
+    arr.push(e.detail.value);
+
+    wx.setStorage({
+      key: 'search',
+      data: arr
+    })
+
+    this.setData({
+      historySearch:arr
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getHot();
-  
+    var that = this;
+    that.getHot();
+    wx.getStorage({
+      key: 'search',
+      success: function(res) {
+        console.log(res)
+        that.setData({
+          historySearch: res.data
+        })
+      },
+    })
   },
 
   /**
@@ -74,9 +103,7 @@ Page({
    * 取消搜索
    */
   cancelFun:function(){
-    wx.navigateBack({
-      
-    })
+    wx.navigateBack()
   },
 
   getHot(){
@@ -85,5 +112,17 @@ Page({
         hotData:res
       })
     })
+  },
+
+  emptySearch(){
+    var that = this;
+    wx.clearStorage({
+      success:function(res){
+        that.setData({
+          historySearch:[]
+        })
+      }
+    });
+
   }
 })

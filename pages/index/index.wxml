@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <top class="top"></top>
-
-  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+  <toTop class="toTop"></toTop>
+  <swiper class="page swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
     <block wx:for="{{homeData.banner}}" wx:key="index">  
       <swiper-item>  
         <image src="{{IMG_URL + item.pic_url}}" class="slide-image" mode="aspectFill"/>  
@@ -86,7 +86,7 @@
   <view class='floor' wx:for="{{floor}}" wx:key="index" wx:for-index="index">
     <view class='nav-li'>
       <text class='name'>{{item.class.class_name}}</text>
-      <text>更多></text>
+      <text class='nav-li-more'>更多></text>
     </view>
     <image class='banner' src='{{IMG_URL+adArr[index].pic_url}}'></image>
     <view class='goods-box'>

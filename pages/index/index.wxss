@@ -252,6 +252,12 @@
 .name {
   border-left: 5rpx solid #f3bd41;
   padding-left: 10rpx;
+  color: #111111;
+}
+
+.nav-li-more{
+  color: #999;
+  padding-right: 5rpx;
 }
 
 .banner {
@@ -262,13 +268,13 @@
 .goods-box {
   width: 100%;
   display: flex;
-  justify-content: row;
+  justify-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
 
 .goods {
-  width: 50%;
+  width: 48%;
   height: 500rpx;
   display: flex;
   flex-direction: column;
@@ -277,17 +283,23 @@
 }
 
 .goods-image {
-  width: 370rpx;
+  width: 100%;
   height: 370rpx;
 }
 
 .goods-title {
-  width: 370rpx;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  height: 50rpx;
+  width: 100%;
+  height: 100rpx;
+  line-height: 50rpx;
   font-size: 30rpx;
+  padding: 0 5rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal!important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .goods-price {
@@ -295,6 +307,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  height: 50rpx;
+  height: 70rpx;
+  line-height: 70rpx;
   color: #da3632;
 }

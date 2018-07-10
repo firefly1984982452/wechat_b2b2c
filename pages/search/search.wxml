@@ -1,6 +1,10 @@
 <view class='search'>
   <view class='top'>
-    <view class='input'>搜索宝贝、店铺……</view>
+    <input type='text' 
+    auto-focus 
+    confirm-type='search' 
+    bindconfirm='searchFun'
+    class='input'>搜索宝贝、店铺……</input>
     <text class='cancel' bindtap='cancelFun'>取消</text>
   </view>
   <view class='content'>
@@ -13,10 +17,10 @@
     <view class='history'>
       <view class='search-type'>历史搜索</view>
       <view class='search-content' >
-        <text wx:for="{{hotData}}" wx:key="index" class='search-name'>{{item.hot_words}}</text>
+        <text wx:for="{{historySearch}}" wx:key="index" class='search-name'>{{item}}</text>
       </view>
     </view>
-    <view class='btn-empty'>清空历史记录</view>
+    <view class='btn-empty' bindtap='emptySearch'>清空历史记录</view>
 
   </view>
 </view>

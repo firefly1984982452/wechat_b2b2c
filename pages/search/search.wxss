@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   font-size: 30rpx;
-
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -20,15 +20,16 @@
   height: 50rpx;
   border-radius: 15rpx;
   color: #fff;
-  width: 70%;
+  width: 80%;
   background-color: #D6B603;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .cancel{
   height: 50rpx;
-  width: 30%;
+  width: 10%;
   display: flex;
   justify-content: center;
 }

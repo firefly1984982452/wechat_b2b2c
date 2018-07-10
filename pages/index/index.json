@@ -1,6 +1,7 @@
 {
   "usingComponents":{
-    "top":"../../components/top/top"
+    "top":"../../components/top/top",
+    "toTop":"../../components/toTop/toTop"
   },
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark"
