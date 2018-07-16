@@ -5,23 +5,23 @@
 
   <view class='content'>
 
-    <view class='left'>
-      <scroll-view class="left-item" wx:for="{{list}}" wx:key="index" scroll-y="true">
+    <scroll-view class='left' scroll-y="{{true}}" style='height:{{deviceHeight}}px'>
+      <view class="left-item" wx:for="{{list}}" wx:key="index">
         {{item.class_name}}
-      </scroll-view>
-    </view>
+      </view>
+    </scroll-view>
 
-    <view class='right'>
+    <scroll-view class='right' scroll-y="{{true}}" style='height:{{deviceHeight}}px'>
       <view class='nav' wx:for="{{listDetail}}" wx:key="index" class=''>
         <text class='nav-class-text'>{{item.class_name}}</text>
         <view class='nav-box'>
-          <view class='nav-item' wx:for="{{item.three}}">
+          <view class='nav-item' wx:for="{{item.three}}" wx:key="index">
             <image class='nav-image' src='{{URL+item.pic_url}}'></image>
             <text class='nav-text'>{{item.class_name}}</text>
           </view>
         </view>
       </view>
-    </view>
+    </scroll-view>
   </view>
 
 </view>

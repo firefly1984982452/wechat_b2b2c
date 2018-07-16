@@ -5,7 +5,7 @@
   <swiper class="page swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
     <block wx:for="{{homeData.banner}}" wx:key="index">  
       <swiper-item>  
-        <image src="{{IMG_URL + item.pic_url}}" class="slide-image" mode="aspectFill"/>  
+        <image bindtap='bannerDetail(item)' src="{{IMG_URL + item.pic_url}}" class="slide-image" mode="aspectFill"/>  
       </swiper-item>  
     </block>  
   </swiper>

@@ -15,6 +15,13 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    wx.getSystemInfo({
+      success: function(res) {
+        that.setData({
+          deviceHeight:res.windowHeight
+        })
+      },
+    })
     wx.request({
       url: 'http://mapi.shopsn.cn/GoodsClass/getFirstId',
       data:'',

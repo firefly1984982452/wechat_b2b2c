@@ -90,6 +90,10 @@ Page({
     })
     console.log(this.data.homeData)
   },
+  bannerDetail: function (item) {
+    console.log(item)
+  },
+
 
   onReachBottom:function(){
     var that = this;
@@ -98,6 +102,9 @@ Page({
     });
     
     that.getFloor();
+  },
+  bannerDetail:function(item){
+    console.log(item)
   }
 
 })

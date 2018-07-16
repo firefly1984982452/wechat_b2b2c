@@ -27,15 +27,16 @@
 
 .right{
   width: 600rpx;
-  height: 500rpx;
+  height: auto;
   background: #F2F2F2;
 }
 .nav{
 }
 .nav-class-text{
-  color: #333;
+  color: #666;
   width: 100%;
   padding: 0 10rpx;
+  font-size: 27rpx;
 }
 .nav-box{
   display: flex;
@@ -45,10 +46,9 @@
   margin-bottom: 10rpx;
 }
 .nav-item{
-  margin: 0 10rpx;
+  margin: 10rpx;
   width: 180rpx;
-  height: 220rpx;
-  padding: 5rpx;
+  height: 230rpx;
   background: #fff;
   display: flex;
   box-sizing: border-box;
@@ -57,9 +57,13 @@
   align-items: center;
 }
 .nav-image{
-  width: 150rpx;
-  height: 150rpx;
+  width: 180rpx;
+  height: 180rpx;
 }
 .nav-text{
-  width: 150rpx;
+  width: 180rpx;
+  text-align: center;
+  font-size: 25rpx;
+  height: 50rpx;
+  line-height: 50rpx;
 }
