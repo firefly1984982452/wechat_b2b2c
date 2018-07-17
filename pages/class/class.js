@@ -1,4 +1,6 @@
 // pages/class/class.js
+var HTTP = require('../../utils/HTTP.js');
+var API = require('../../utils/API.js');
 Page({
 
   /**
@@ -7,7 +9,8 @@ Page({
   data: {
     list:[],
     listDetail:[],
-    URL:'http://center.shopsn.cn/'
+    URL:'http://center.shopsn.cn/',
+    classID:1
   },
 
   /**
@@ -21,38 +24,39 @@ Page({
           deviceHeight:res.windowHeight
         })
       },
-    })
-    wx.request({
-      url: 'http://mapi.shopsn.cn/GoodsClass/getFirstId',
-      data:'',
-      method:'post',
-      header:{
-        'content-type':'application/json'
-      },
-      success:function(res){
-        that.setData({
-          list:res.data.data
-        })
-      }
     });
-    that.getClassFloor(1);
+    that.getClass();
+    that.getClassFloor(that.data.classID);
+  },
+
+  getClass(){
+    HTTP(API.getClass,{},'post').then((res)=>{
+      this.setData({
+        list: res,
+        classID:res[0].id
+      })
+      console.log(this.data.classID)
+    })
   },
   
   getClassFloor(index){
-    var that = this;
-    wx.request({
-      url: 'http://mapi.shopsn.cn/GoodsClass/getOtherClass',
-      method:'get',
-      data:{fid:index},
-      header:{
-        'content-type':'application/json'
-      },
-      success:function(res){
-        that.setData({
-          listDetail : res.data.data
-        })
-      }
+    wx.showLoading({
+      title: '加载中...',
+    });
+    HTTP(API.getClassDetail,{fid:index},'get').then((res)=>{
+      this.setData({
+        listDetail: res
+      })
+      wx.hideLoading();
     })
+  },
+
+  tabFun(e){
+    var index = e.target.id;
+    this.setData({
+      classID:index
+    })
+    this.getClassFloor(index);
   },
 
   /**

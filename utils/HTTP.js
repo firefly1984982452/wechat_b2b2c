@@ -9,7 +9,9 @@ var HTTP = function(API,params,requestType){
       data: params,
       method: '' + requestType,
       header: {
-        'content-type': 'application/json' // 默认值
+        //设置参数内容类型为x-www-form-urlencoded
+        'content-type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
       },
       success: function (res) {
         if(res.data.status == 1){

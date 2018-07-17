@@ -6,7 +6,10 @@
   <view class='content'>
 
     <scroll-view class='left' scroll-y="{{true}}" style='height:{{deviceHeight}}px'>
-      <view class="left-item" wx:for="{{list}}" wx:key="index">
+      <view 
+      class="left-item {{item.id == classID ? 'active' : ''}}" 
+      wx:for="{{list}}" wx:key="index" 
+      bindtap='tabFun' id='{{item.id}}'>
         {{item.class_name}}
       </view>
     </scroll-view>
