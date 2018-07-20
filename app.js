@@ -6,7 +6,7 @@ App({
   globalData: {
     userInfo: null,
     name:'ShopsN',
-    IMG_URL:'http://center.shopsn.cn/'
+    IMG_URL:'http://center.shopsn.cn'
 
   }
 })

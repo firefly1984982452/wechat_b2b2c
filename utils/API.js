@@ -10,5 +10,8 @@ module.exports = {
 
   //分类
   getClass: 'GoodsClass/getFirstId', //获取分类数据
-  getClassDetail : 'GoodsClass/getOtherClass' //获取分类详情
+  getClassDetail : 'GoodsClass/getOtherClass', //获取分类详情
+
+  //商品详情
+  goodsDetail: 'Goods/goodInfo', //商品详情
 }

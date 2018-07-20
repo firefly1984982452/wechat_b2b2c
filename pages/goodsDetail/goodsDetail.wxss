@@ -1,0 +1,12 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+.swiper{
+  margin-top: 100rpx;
+  width: 750rpx;
+  height: 500rpx;
+  display: flex;
+}
+
+.slide-image{
+  width: 100%;
+  height: 500rpx;
+}

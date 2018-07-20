@@ -262,7 +262,7 @@
 
 .banner {
   width: 100%;
-  height: 300rpx;
+  height: 350rpx;
 }
 
 .goods-box {

@@ -1,0 +1,11 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<view>
+  <swiper class="page swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+    <block wx:for="{{goodsInfo.images}}" wx:key="index">  
+      <swiper-item>  
+        <image bindtap='bannerDetail' src="{{IMG_URL + item.pic_url}}" class="slide-image" mode="aspectFill"/>  
+      </swiper-item>  
+    </block>  
+  </swiper>
+  <text>{{goodsInfo.title}}</text>
+</view>

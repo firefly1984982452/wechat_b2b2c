@@ -1,61 +1,28 @@
-// pages/class/class.js
+// pages/goodsDetail/goodsDetail.js
 var HTTP = require('../../utils/HTTP.js');
 var API = require('../../utils/API.js');
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:[],
-    listDetail:[],
-    URL:'http://center.shopsn.cn/',
-    classID:1
+    IMG_URL: app.globalData.IMG_URL,
+    goodsID:0,
+    goodsInfo:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    wx.getSystemInfo({
-      success: function(res) {
-        that.setData({
-          deviceHeight:res.windowHeight
-        })
-      },
-    });
-    that.getClass();
-    that.getClassFloor(that.data.classID);
-  },
-
-  getClass(){
-    HTTP(API.getClass,{},'post').then((res)=>{
-      this.setData({
-        list: res,
-        classID:res[0].id
-      })
-    })
-  },
-  
-  getClassFloor(index){
-    wx.showLoading({
-      title: '加载中...',
-    });
-    HTTP(API.getClassDetail,{fid:index},'get').then((res)=>{
-      this.setData({
-        listDetail: res
-      })
-      wx.hideLoading();
-    })
-  },
-
-  tabFun(e){
-    var index = e.target.id;
+    console.log(options.id)
     this.setData({
-      classID:index
+      goodsID:options.id
     })
-    this.getClassFloor(index);
+    this.getDetail();
+  
   },
 
   /**
@@ -105,5 +72,12 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  getDetail(){
+    HTTP(API.goodsDetail,{id:this.data.goodsID},'get').then((res)=>{
+      this.setData({
+        goodsInfo:res
+      })
+    })
   }
 })

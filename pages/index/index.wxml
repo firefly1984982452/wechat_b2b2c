@@ -5,7 +5,7 @@
   <swiper class="page swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
     <block wx:for="{{homeData.banner}}" wx:key="index">  
       <swiper-item>  
-        <image bindtap='bannerDetail(item)' src="{{IMG_URL + item.pic_url}}" class="slide-image" mode="aspectFill"/>  
+        <image bindtap='bannerDetail' src="{{IMG_URL + item.pic_url}}" class="slide-image" mode="aspectFill"/>  
       </swiper-item>  
     </block>  
   </swiper>
@@ -90,11 +90,11 @@
     </view>
     <image class='banner' src='{{IMG_URL+adArr[index].pic_url}}'></image>
     <view class='goods-box'>
-      <view class='goods' wx:for="{{item.goods}}" wx:key="index">
+      <navigator url='../goodsDetail/goodsDetail?id={{item.id}}' class='goods' wx:for="{{item.goods}}" wx:key="index">
         <image class='goods-image' src='{{IMG_URL+item.pic_url}}'></image>
         <text class='goods-title'>{{item.title}}</text>
         <text class='goods-price'>￥{{item.price}}</text>
-      </view>
+      </navigator>
     </view>
   </view>
 </view>

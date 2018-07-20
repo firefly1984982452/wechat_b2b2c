@@ -5,7 +5,8 @@
     "pages/cart/cart",
     "pages/class/class",
     "pages/search/search",
-    "pages/mine/order/orderList"
+    "pages/mine/order/orderList",
+    "pages/goodsDetail/goodsDetail"
   ],
   "window": {
     "backgroundTextStyle": "dark",

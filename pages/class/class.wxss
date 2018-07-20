@@ -23,6 +23,7 @@
 .left-item.active{
   color: #e09629;
   border-left: 5rpx solid #e9c440;
+  background-color: #f2f2f2;
 }
 
 .right{
@@ -66,4 +67,5 @@
   font-size: 25rpx;
   height: 50rpx;
   line-height: 50rpx;
+  color: #797979;
 }

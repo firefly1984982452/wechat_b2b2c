@@ -90,8 +90,8 @@ Page({
     })
     console.log(this.data.homeData)
   },
-  bannerDetail: function (item) {
-    console.log(item)
+  bannerDetail: function () {
+    console.log('item')
   },
 
 
@@ -102,9 +102,6 @@ Page({
     });
     
     that.getFloor();
-  },
-  bannerDetail:function(item){
-    console.log(item)
   }
 
 })
