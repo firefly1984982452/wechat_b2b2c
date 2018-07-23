@@ -8,4 +8,8 @@
     </block>  
   </swiper>
   <text>{{goodsInfo.title}}</text>
+  <view>
+    <text>{{goodsInfo.price_market}}</text>
+    <text>{{goodsInfo.price_market}}</text>
+  </view>
 </view>
