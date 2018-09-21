@@ -24,8 +24,10 @@
         </swiper-item>
       </block>
     </swiper>
-    <text>更多</text>
+    <navigator url="http://m.shopsn.cn/home" hover-class="navigator-hover">更多</navigator>
   </view>
+  <web-view src="http://m.shopsn.cn/home"></web-view>
+  
 
   <!-- 导航 -->
   <view class='nav'>
