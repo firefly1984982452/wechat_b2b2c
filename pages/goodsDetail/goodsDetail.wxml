@@ -12,4 +12,6 @@
     <text>{{goodsInfo.price_market}}</text>
     <text>{{goodsInfo.price_market}}</text>
   </view>
+  <view>加入购物车</view>
+  <view>立即购买</view>
 </view>
